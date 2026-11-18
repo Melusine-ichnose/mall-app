@@ -1,0 +1,16 @@
+# Maven #
+target/
+
+# IDEA #
+.idea/
+*.iml
+
+# Eclipse #
+.settings/
+.classpath
+.project
+
+# 本地运行日志与启动脚本 #
+*.log
+*-bg.cmd
+*.vbs

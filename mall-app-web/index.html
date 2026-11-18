@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') ||
+      CSS.supports('top: constant(a)'))
+    document.write(
+      '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
+      (coverSupport ? ', viewport-fit=cover' : '') + '" />')
+  </script>
+  <title>mall-app-web</title>
+  <style>
+    /* 桌面浏览器里把整站收窄成手机宽度并居中，手机访问不受影响 */
+    html, body { background: #f2f3f5; }
+    #app {
+      max-width: 390px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background: #fff;
+      box-shadow: 0 0 16px rgba(0, 0, 0, .08);
+      position: relative;
+    }
+    /* 底部 tabbar 是 fixed 定位，单独收窄才能跟着居中 */
+    .uni-tabbar {
+      max-width: 390px;
+      margin: 0 auto;
+    }
+    @media (max-width: 500px) {
+      #app { max-width: none; box-shadow: none; }
+      .uni-tabbar { max-width: none; }
+    }
+  </style>
+  <!--preload-links-->
+  <!--app-context-->
+</head>
+
+<body>
+  <div id="app">
+    <!--app-html-->
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
